@@ -1,11 +1,12 @@
 const container=document.querySelector('#container');
-      style=document.querySelectorAll('.color');
+      styles=document.querySelectorAll('.color');
       clear=document.querySelector('#clear');
       resize=document.querySelector('#resize');
       CONTAINER_SIZE=400;
-let mode="black";
+let mode="Black";
     blocks=null;
     squareSize=null;
+    selected=styles[0]; //primer boton, negro.
 
 function resizeCanvas(squares){
     let div;
@@ -28,12 +29,26 @@ function resizeCanvas(squares){
 
 function color(e) {
     console.log(e.target);
-    switch (mode) {
-        case ("black"): {
+    switch (selected.textContent) {
+        case ("Black"): {
             e.target.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: black;`);
             break;
         }
+        case ("White"): {
+            e.target.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: white;`);
+            break;
+        }
     }
+}
+
+styles.forEach(style => style.addEventListener('click', selection));
+
+function selection(e) {
+    if (selected!==null) {
+        selected.classList.remove('selected');
+    }
+    selected=e.target;
+    selected.classList.add('selected');
 }
 
 clear.addEventListener('click', () => {
@@ -41,7 +56,9 @@ clear.addEventListener('click', () => {
 });
 
 
+
+
 window.addEventListener('load', () => {
-    alert('loaded');
     resizeCanvas(16);
+    selected.classList.add('selected');
 });
