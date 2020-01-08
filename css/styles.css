@@ -58,6 +58,7 @@ h1 {
   }
 
   .block {
-    background-color: white;
-    display: inline;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
   }
