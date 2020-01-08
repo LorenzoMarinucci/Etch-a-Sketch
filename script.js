@@ -38,6 +38,13 @@ function color(e) {
             e.target.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: white;`);
             break;
         }
+        case("Random"): {
+            let V1=Math.random()*255;
+                V2=Math.random()*255;
+                V3=Math.random()*255;
+            e.target.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: rgb(${V1}, ${V2}, ${V3});`);
+            break;
+        }
     }
 }
 
