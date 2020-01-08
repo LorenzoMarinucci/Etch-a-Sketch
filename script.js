@@ -36,6 +36,10 @@ function color(e) {
     }
 }
 
+clear.addEventListener('click', () => {
+    blocks.forEach(block => block.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: white;`));
+});
+
 
 window.addEventListener('load', () => {
     alert('loaded');
