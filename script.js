@@ -89,3 +89,15 @@ window.addEventListener('load', () => { //al cargar la pagina establece un boton
     resizeCanvas(16);
     selected.classList.add('selected');
 });
+
+
+resize.addEventListener('click', userResize);
+
+function userResize() {
+    let input=document.querySelector('#squares');
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+    resizeCanvas(Number(input.value));
+    blocks.forEach(block => block.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background:rgb(255,255,255);`));
+}
