@@ -3,24 +3,39 @@ const container=document.querySelector('#container');
       clear=document.querySelector('#clear');
       resize=document.querySelector('#resize');
       CONTAINER_SIZE=400;
+let mode="black";
+    blocks=null;
+    squareSize=null;
 
 function resizeCanvas(squares){
-    const SQUARE_SIZE=CONTAINER_SIZE/squares;
     let div;
-   // for (let i=1; i<=Math.pow(squares, 2); i++) {
+    squareSize=CONTAINER_SIZE/squares;
     for (let i=1; i<=squares; i++) {
         let row=document.createElement('div');
         row.classList.add('row');
-        row.setAttribute('style', `width: ${SQUARE_SIZE*squares}px; height: ${SQUARE_SIZE}px;`)
+        row.setAttribute('style', `width: ${squareSize*squares}px; height: ${squareSize}px;`)
         for (let j=1; j<=squares; j++) {
             div=document.createElement('div');
             div.classList.add('block');
-            div.setAttribute('style', `width: ${SQUARE_SIZE}px; height: ${SQUARE_SIZE}px; background-color:white;`);
+            div.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background-color:white;`);
             row.appendChild(div);
          }
         container.appendChild(row);
     }
+    blocks=document.querySelectorAll('.block');
+    blocks.forEach(block => block.addEventListener('mouseover', color));
 }
+
+function color(e) {
+    console.log(e.target);
+    switch (mode) {
+        case ("black"): {
+            e.target.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background: black;`);
+            break;
+        }
+    }
+}
+
 
 window.addEventListener('load', () => {
     alert('loaded');
