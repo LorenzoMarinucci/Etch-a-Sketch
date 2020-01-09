@@ -11,16 +11,17 @@ function resizeCanvas(squares){ //creacion de la plantilla de bloques.
     let div;
     squareSize=CONTAINER_SIZE/squares;
     for (let i=1; i<=squares; i++) {
-        let row=document.createElement('div');
-        row.classList.add('row');
-        row.setAttribute('style', `width: ${squareSize*squares}px; height: ${squareSize}px;`)
+        //let row=document.createElement('div');
+        //row.classList.add('row');
+        //row.setAttribute('style', `width: ${squareSize*squares}px; height: ${squareSize}px;`)
         for (let j=1; j<=squares; j++) {
             div=document.createElement('div');
             div.classList.add('block');
             div.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background-color:rgb(255,255,255);`);
-            row.appendChild(div);
+           // row.appendChild(div);
+            container.appendChild(div);
          }
-        container.appendChild(row);
+        //container.appendChild(row);
     }
     blocks=document.querySelectorAll('.block');
     blocks.forEach(block => block.addEventListener('mouseover', color));
@@ -95,9 +96,11 @@ resize.addEventListener('click', userResize);
 
 function userResize() {
     let input=document.querySelector('#squares');
+    if (Number(input.value)<=100) {
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
     resizeCanvas(Number(input.value));
     blocks.forEach(block => block.setAttribute('style', `width: ${squareSize}px; height: ${squareSize}px; background:rgb(255,255,255);`));
+}
 }
