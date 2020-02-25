@@ -1,98 +1,104 @@
+html {
+  background-image: linear-gradient(to bottom right, #dae6ff, white);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 header {
-    background: lightgoldenrodyellow;
-    text-align: center;
-    height: 80px;
-    border-style: solid;
-    border-color: grey;;
-    border-bottom-width: 1px;
-    box-shadow: 0px 10px 10px grey;
+  background: lightgoldenrodyellow;
+  text-align: center;
+  height: 80px;
+  border-style: solid;
+  border-color: grey;
+  border-bottom-width: 1px;
+  margin-bottom: 1px solid grey;
 }
 
 h1 {
-    position: relative;
-    top: 10px;
-    font-family: "Courier";
-    color: #7FDBFF;
-    font-weight: bold;
-    font-size: 60px;
-    color: or;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
+  position: relative;
+  top: 10px;
+  font-family: "Courier";
+  color: #7fdbff;
+  font-weight: bold;
+  font-size: 60px;
+  color: or;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
-  #content {
-      position:static;
-      overflow: auto;
-      background-image: linear-gradient(to bottom right, #dae6ff, white);
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-      text-align:center;
-  }
+#content {
+  position: static;
+  overflow: auto;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  #container {
-      margin: 20px auto;
-      width:400px;
-      height:400px;
-      border-style: solid;
-      border-width: 1px;
-      border-radius: 0px;
-      vertical-align: top;
-      line-height:0;
-  }
+#container {
+  margin: 20px auto;
+  width: 400px;
+  height: 400px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0px;
+  vertical-align: top;
+  line-height: 0;
+}
 
-  #menu {
-    margin-top:20px;
-  }
+#menu {
+  margin-top: 20px;
+}
 
-  #gridScale {
-    display: inline-block;
-    border: 2px solid #4CAF50;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    font-family: "Courier";
-    font-weight: bold;
-    padding: 14px 32px;
-    margin: 0 10px;
-  }
+#gridScale {
+  display: inline-block;
+  border: 2px solid #4caf50;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-family: "Courier";
+  font-weight: bold;
+  padding: 14px 32px;
+  margin: 0 10px;
+}
 
-  input {
-    display: inline-block;
-  }
+input {
+  display: inline-block;
+}
 
-  button {
-    border: 2px solid #4CAF50;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 16px;
-    font-family: "Courier";
-    font-weight: bold;
-    padding: 16px 32px;
-    margin: 0 10px;
-    transition-duration: 0.2s;
-  }
+button {
+  border: 2px solid #4caf50;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-family: "Courier";
+  font-weight: bold;
+  padding: 16px 32px;
+  margin: 0 10px;
+  transition-duration: 0.2s;
+}
 
-  button:hover, button.selected {
-    background-color: white;
-    color: black;
-  }
+button:hover,
+button.selected {
+  background-color: white;
+  color: black;
+}
 
-  button:active {
-    transform: scale(0.9);
-  }
+button:active {
+  transform: scale(0.9);
+}
 
-  #style {
-    margin-top: 40px;
-  }
+#style {
+  margin-top: 40px;
+}
 
-  #options {
-      margin-top: 35px;
-      margin-bottom: 20px;
-  }
+#options {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
 
-  .block {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-  }
+.block {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
